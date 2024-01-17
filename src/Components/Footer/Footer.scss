@@ -1,0 +1,180 @@
+@import '../../Styles/mixins.scss';
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat center / cover url(../../Assets/Images/bgcapibaribe.svg);
+    padding: 10px;
+}
+
+hr {
+    border: 1px solid ;
+    width: 85%;
+    margin-bottom: 10px;
+    color: #baebba;
+
+}
+
+.copy {
+    color: white;
+    padding: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+
+    padding: 50px 0;
+    justify-content: space-around;
+    align-items: center;
+
+    &__contact {
+        display: grid;
+
+        &--logo {
+            margin-bottom: 20px;
+
+            @include respond(Tab) {
+                width: 80%;
+            }
+        }
+
+        &--info {
+            color: white;
+            font-size: 16px;
+            margin-top: -10px;
+
+            @include respond(Tab) {
+                text-align: center;
+                margin-right: 3rem;
+            }
+        }
+
+        &--contact {
+            font-weight: bolder;
+
+            span {
+                color: white;
+            }
+        }
+    }
+
+    &__courses {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0;
+        font-weight: 400;
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__useful-links {
+        display: flex;
+        flex-direction: column;
+
+        &__links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    &__social {
+        display: flex;
+        flex-direction: column;
+
+        &--icons {
+            display: flex;
+            gap: 15px;
+        }
+    }
+
+    a {
+        font-size: 1.1rem;
+        text-decoration: none;
+        color: white;
+
+        &:hover {
+            color: #FEAE11;
+            transition: color 0.5s ease;
+        }
+    }
+
+    #clickable {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 50px;
+    }
+
+
+}
+
+@media only screen and (max-width: 950px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        &__contact {
+            text-align: center;
+        }
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .footer__contact {
+        align-self: flex-start;
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    #clickable {
+        flex-direction: column;
+        align-self: start;
+        margin-left: 50px;
+    }
+}
+
+.footer-title {
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-ul {
+    list-style: none;
+}
+
+.footer-icons-ul {
+    list-style: none;
+    display: flex;
+
+}
+
+.footer-icons-li {
+    color: #FFF;
+    cursor: pointer;
+    margin-right: 40px;
+}
+
+.footer-li {
+    color: #FFF;
+    cursor: pointer;
+    font-size: 16px !important;
+}
+
+.footer-li:hover {
+    color: #902feb;
+    transition: color 0.5s ease;
+}
+

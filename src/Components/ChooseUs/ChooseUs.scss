@@ -1,0 +1,113 @@
+@import '../../Styles/mixins.scss';
+
+.choose {
+    position: relative;
+    padding-block: 7rem;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../Assets/Images/bgvetor.svg") center center/cover no-repeat;
+        opacity: 0.07;
+        z-index: -1;
+    }
+
+    h4 {
+        font-size: 30px;
+        font-weight: 500;
+        text-align: center;
+        margin-bottom: 6rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        align-items: flex-start;
+        gap: 16rem;
+
+        @include respond(Tab-land) {
+            gap: 10rem;
+        }
+
+        @include respond(Tab) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__left {
+        position: relative;
+
+        @include respond (Tab) {
+            width: 70%;
+            margin-inline: auto;
+        }
+    }
+
+    .img-1 {
+        width: 100%;
+        border-radius: 30%;
+        animation: moveUpDown 10s alternate infinite;
+
+        img {
+            width: 2rem;
+
+            @include respond(Phone) {
+                width: 1.5rem;
+            }
+        }
+    }
+
+    &__points-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+    &__point {
+        background-color: #7ca45c;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
+
+    &__point-text {
+        font-size: 25px;
+        font-weight: 400;
+        color: #fff;
+    }
+
+    &__point-icon {
+        width: 35px;
+        height: 35px;
+        color: #fff;
+        border: 2px solid #fff;
+        border-radius: 30px 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 700;
+    }
+
+    .choose__right-title {
+        font-size: 30px;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+
+    .choose__right--text {
+        font-size: 17px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+}

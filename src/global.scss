@@ -1,0 +1,144 @@
+@import './Styles/mixins.scss';
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    color: #212121;
+    background-color: #F2F2F2;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.7em;
+}
+
+img {
+    display: block;
+}
+
+button {
+    display: inline-block;
+    outline: none;
+    border: none;
+    background: none;
+}
+
+h1 {
+    color: #fff;
+    letter-spacing: -1.7px;
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 10px;
+
+    @include respond(Tab) {
+        font-size: 40px;
+    }
+}
+
+h4 {
+    color: #110d34;
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.1em;
+
+    @include respond(Tab) {
+        font-size: 25px;
+    }
+}
+
+h3 {
+    color: #110d34;
+    margin-bottom: 10px;
+    font-family: "Inter", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1em;
+
+    @include respond(Tab-land) {
+        font-size: 30px;
+    }
+}
+
+h6 {
+    color: #110d34;
+    margin-bottom: 10px;
+    font-family: "Inter" sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.1em;
+}
+
+.button-primary {
+    color: #fff;
+    text-align: center;
+    background-color: #086C5E;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    
+    &:hover {
+        background-color: #00A884;
+        cursor: pointer;
+    };
+}
+
+.button-secondary {
+    cursor: pointer;
+    color: #121212;
+    text-align: center;
+    background-color: #FFF;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    padding: 10px 30px;
+    transition: .3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 0px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+    &:hover {
+        color: #fff;
+        background-color: #075f53;
+        transition: .3s ease-in-out;
+    }
+}
+
+.button-outline {
+    color: #110d34;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #110d34;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        background-color: #7ca45c;
+        color: #fff;
+    }
+}
+
+.button-outline-2 {
+    color: #fff;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: 10px 30px;
+    transition: all 0.3s ease-in-out;
+    
+
+    &:hover {
+        cursor: pointer;
+        background-color: #fff;
+        color: #00A884;
+    }
+}

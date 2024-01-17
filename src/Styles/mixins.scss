@@ -1,0 +1,32 @@
+// Media Query Manager
+
+// 0 - 600px:        Phone
+// 600px - 900px:    Tablet
+// 900px - 1200px:   Tablet Landscape
+// 1200px - 1800px:  Desktop
+
+// $breakpoint argument choices
+// - Phone
+// - Tab 
+// - Tab-land
+// - Desktop
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == Phone {
+        @media screen and (max-width: 37.5em) {
+            @content;
+        } // 600px
+    }
+
+    @if $breakpoint == Tab {
+        @media screen and (max-width: 56.25em) {
+            @content;
+        } // 900px
+    }
+
+    @if $breakpoint == Tab-land {
+        @media screen and (max-width: 75em) {
+            @content;
+        } //1200px
+    }
+}

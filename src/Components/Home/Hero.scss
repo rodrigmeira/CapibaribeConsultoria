@@ -1,0 +1,68 @@
+@import '../../Styles/mixins.scss';
+
+.hero {
+    background: no-repeat center / cover url(../../Assets/Images/bgcapibaribe.svg);
+    padding-block: 14.5rem;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 4rem;
+    
+        @include respond(Tab) {
+          flex-direction: column;
+        }
+    }
+
+    &__btn-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+        justify-content: center;
+    }
+
+    &__right {
+        position: relative;
+
+        @include respond(Tab) {
+            width: 70%;
+            margin-inline: auto;
+        }
+    }
+
+    &__left {
+        margin-top: 90px;
+    }
+
+        &__left--subtitle {
+            color: #fff;
+            font-weight: 300;
+            font-size: 19px;
+            margin-top: 20px;
+        }
+
+    .img-1 {
+        width: 100%;
+        border-radius: 10px;
+        animation: moveUpDown 10s alternate infinite;
+    }
+}
+
+@keyframes moveUpDown {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(20px);
+    }
+
+    75% {
+        transform: translateY(0);
+    }
+}

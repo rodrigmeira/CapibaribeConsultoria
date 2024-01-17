@@ -1,0 +1,104 @@
+@import '../../Styles/mixins.scss';
+
+.newsletter {
+    position: relative;
+    padding-block: 6rem;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../../Assets/Images/bgvetor.svg") center center/cover no-repeat;
+        opacity: 0.07;
+        z-index: -1;
+    }
+
+    &__container {
+        display: grid;
+        align-items: flex-start;
+        grid-template-columns: repeat(2, 1fr);
+
+        @include respond(Tab-land) {
+            grid-template-columns: 30% 70%;
+        }
+
+        @include respond (Tab) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    img {
+        transform: translateX(3rem);
+
+        @include respond(Tab-land) {
+            transform: translateX(-3rem);
+        }
+
+        @include respond(Tab) {
+            display: none;
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        
+        @include respond(Phone) {
+            text-align: center;
+        }
+    }
+
+    p {
+        text-align: center;
+
+        @include respond(Phone) {
+            text-align: center;
+        }
+    }
+
+    &__right {
+        margin-top: 6rem;
+        z-index: 5;
+    }
+
+    input {
+        outline: none;
+        border: none;
+    }
+
+    form {
+        border: 2px solid #075f53;
+        z-index: 1;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;  
+        margin-top: 3rem;
+        padding: 1rem;
+        border-radius: 1rem;
+        background-color: #fff;
+
+        label {
+            display: flex;
+            width: 50%;
+            flex-direction: column;  
+            margin-bottom: 1rem;
+
+            input {
+                padding: 0.6rem;
+                border: 1px solid #075f53;
+                border-radius: 0.5rem;
+                margin-top: 0.3rem;
+            }
+        }
+
+        .button-primary {
+            margin-top: 1rem;
+            padding: 0.6rem 2rem;
+        }
+    }
+}
