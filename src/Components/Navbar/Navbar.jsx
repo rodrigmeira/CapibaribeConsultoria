@@ -4,9 +4,15 @@ import Wrapper from "../Wrapper/Wrapper";
 import Logo from "../../Assets/Images/logo.svg";
 import { FaBars } from "react-icons/fa";
 import "./Navbar.scss";
+import "./Modal.scss";
 
 const Navbar = () => {
   const [showNav, setShowNav] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -39,7 +45,12 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link to={`risk`} smooth={true} duration={500}>
+            <Link
+              to={`risk`}
+              smooth={true}
+              duration={500}
+              onClick={toggleModal}
+            >
               Risco e Compliance
             </Link>
           </li>
@@ -52,7 +63,8 @@ const Navbar = () => {
 
         <a
           href="https://api.whatsapp.com/send?phone=5581973400191&text=Ol%C3%A1,%20visitei%20o%20site%20e%20gostaria%20de%20solicitar%20uma%20consulta!"
-          className="button-primary navbar__btn" target="blank"
+          className="button-primary navbar__btn"
+          target="blank"
         >
           Fale Conosco
         </a>
@@ -64,7 +76,38 @@ const Navbar = () => {
           <FaBars />
         </div>
       </Wrapper>
+      {showModal && (
+        <Modal onClose={toggleModal}>
+          <h2 className="modal__title">Risco e Compliance</h2>
+          <h3 className="modal__subtitle">
+            Confira nosso código de conduta e manual de compliance!
+          </h3>
+          <div className="modal__links">
+            <a
+              target="_blank"
+              href="https://heyzine.com/flip-book/029c08f6be.html"
+            >
+              Código de Conduta ↗
+            </a>
+            <a
+              target="-blank"
+              href="https://heyzine.com/flip-book/cefc62f36b.html"
+            >
+              Manual de Compliance ↗
+            </a>
+          </div>
+        </Modal>
+      )}
     </nav>
+  );
+};
+
+const Modal = ({ children, onClose }) => {
+  return (
+    <div className="modal">
+      <div className="modal__overlay" onClick={onClose} />
+      <div className="modal__content">{children}</div>
+    </div>
   );
 };
 
