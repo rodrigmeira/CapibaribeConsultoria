@@ -2,6 +2,7 @@
 
 .hero {
     background: no-repeat center / cover url(../../Assets/Images/bgcapibaribe.svg);
+    background-attachment: fixed;
     padding-block: 14.5rem;
 
     &__container {

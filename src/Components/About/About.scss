@@ -2,6 +2,7 @@
 
 .about {
     background: no-repeat center / cover url(../../Assets/Images/bgcapibaribe.svg);
+    background-attachment: fixed;
     padding-block: 6rem;
 
     &__container {

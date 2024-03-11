@@ -3,6 +3,7 @@
 .workers {
     padding-block: 6rem;
     background: no-repeat center / cover url(../../Assets/Images/bgcapibaribe.svg);
+    background-attachment: fixed;
 
     &__text {
         text-align: center;
