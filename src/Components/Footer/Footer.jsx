@@ -18,7 +18,7 @@ const Footer = () => {
                 <h3 className="footer-title">Nosso Endereço</h3>
                 <div className="footer__courses__links">
                     <a href="https://maps.app.goo.gl/XBAz22uR1K3P2tZ39" target='blank'>
-                        <p title='Ir até o endereço' className="footer-li">Edf. Domar - R. Eng. Ubaldo Gomes de Matos, <br/>Nº53 Sala 31, Santo Antônio, Recife - PE, 50010-580</p>
+                        <p title='Ir até o endereço' className="footer-li">Rua São Jorge, 240. Bloco D, <br/>5º Andar, Sala 11-12, Bairro do Recife - PE.</p>
                     </a>
                 </div>
             </div>
